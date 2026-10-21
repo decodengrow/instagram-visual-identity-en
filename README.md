@@ -39,3 +39,7 @@ Share your references (post screenshots, a moodboard) and briefly describe the b
 SKILL.md              — role, process, deliverable order, principles
 references/stages.md  — detailed per-stage checklist and master prompt template
 ```
+
+## License
+
+MIT — see [LICENSE](LICENSE).
