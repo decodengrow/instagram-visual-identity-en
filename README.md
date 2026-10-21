@@ -19,6 +19,12 @@ Works in 10 stages:
 9. Quality control against 12 criteria
 10. A 15-section final deliverable and a master prompt for future posts
 
+## Example
+
+![Sample carousel produced with the system](examples/images/carousel-strip.png)
+
+An illustrative excerpt for a fictional brand — direction, color and type tokens, grid, a slide-by-slide spec, QC scores and a master prompt: [examples/EXAMPLE.md](examples/EXAMPLE.md).
+
 ## Installation
 
 **Claude Code:**
