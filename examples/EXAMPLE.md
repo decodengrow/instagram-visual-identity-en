@@ -18,27 +18,29 @@
 | Ink | `#141414` | Headlines, body |
 | Graphite | `#5C5A55` | Secondary text, labels |
 | Rule | `#CFC8BA` | Dividers, table lines |
-| Signal | `#D2421B` | Margin rule, one emphasis per slide, annotations |
+| Signal | `#D2421B` | Margin rule, annotation rule, one large emphasis per slide (4.0:1 on Paper — large text only) |
+| Signal Text | `#B23A12` | Annotation text on Paper (5.2:1) |
+| Signal Tint | `#F06A43` | The one emphasis on Deep slides (4.8:1 on Deep) |
 | Deep | `#1F2A24` | Closing / manifesto slides only |
 
-Forbidden: Signal as a background fill; Signal body text; more than one Signal emphasis per slide.
+Forbidden: any Signal as a background fill; Signal (`#D2421B`) for text under 66 px on canvas; Signal Tint on Paper; more than one Signal emphasis per slide.
 
 | Level | Face | Size on 1080 | Leading | Tracking | Case |
 |---|---|---|---|---|---|
 | Display | Instrument Serif | 180–240 px | 0.86–0.9 | −2.5% | Sentence |
 | H2 | Instrument Serif | 84–132 px | 0.95–1.0 | 0 | Sentence |
 | Body | Inter 400 | 32–34 px | 1.4–1.45 | 0 | Sentence |
-| Annotation | Instrument Serif Italic, Signal | 34–36 px | 1.15 | 0 | Sentence |
+| Annotation | Instrument Serif Italic, Signal Text | 34–36 px | 1.15 | 0 | Sentence |
 | Label / folio | JetBrains Mono 400 | 22 px | 1 | +8% | UPPER |
 
 ## 8. Grid
 
-Canvas 1080×1350 (4:5). Outer margin 96 px (8.9%). Header baseline at 64 px from top, footer rule at 1206 px. Margin rule: 4 px Signal at x = 72 px, full bleed, on paper slides only. Main column 96–700 px; annotation column 770–1020 px. Spacing scale: 8 / 16 / 24 / 32 / 64 / 96.
+Canvas 1080×1350 (4:5). Outer margin 96 px (8.9%). Header baseline at 64 px from top, footer rule at 1206 px. Margin rule: 4 px Signal at x = 72 px, full bleed, on paper slides only — deliberately inside the outer margin, so it frames the text column without touching it. Main column 96–700 px; annotation column 770–1020 px. Spacing scale: 8 / 16 / 24 / 32 / 64 / 96.
 
 ## 9. Signature elements
 
 - **Margin rule** — the red vertical line. Present on every paper slide; absent on Deep slides so closings feel like a change of register.
-- **Marginal note** — one italic Signal annotation per slide, max 12 words. Never decorative; it must add a judgment the body doesn't state.
+- **Marginal note** — one italic annotation per slide in Signal Text under a short Signal rule, max 12 words. Never decorative; it must add a judgment the body doesn't state.
 - **Folio** — `NN / NN` top right in mono. Always.
 
 ## 13. Production spec — carousel "Your logo is not your brand" (Architecture C, 4 slides)
@@ -48,9 +50,9 @@ Canvas 1080×1350 (4:5). Outer margin 96 px (8.9%). Header baseline at 64 px fro
 | 01 | Cover — the claim | Display headline, 3 lines, last word in Signal italic (9%, 17%, 75%); dek in Graphite (9%, 78%, 52%); footer "Swipe →" | Paper |
 | 02 | The usual advice | H2 quote (9%, 15%, 59%); body (9%, 41%, 56%); marginal note (71%, 41%, 23%) | Paper |
 | 03 | A working model | H2 (9%, 13%, 70%); 5-row ruled list, row 05 marked "← smallest" (9%, 35%, 82%); footer states "Model, not measured data" | Paper |
-| 04 | Discussion question | H2, last word in Signal-tint italic (9%, 24%, 81%); prompt (9%, 67%, 57%); "Save for later" | Deep |
+| 04 | Discussion question | H2, last word in Signal Tint italic (9%, 24%, 81%); prompt (9%, 67%, 57%); "Save for later" | Deep |
 
-Not yet produced: final copy review, alt text, export at 1080×1350.
+Not yet produced: final copy review, alt text, the annotation color fix below (slides 02–03), export at 1080×1350.
 
 ## 14. Quality control (this carousel)
 
@@ -61,7 +63,7 @@ Not yet produced: final copy review, alt text, export at 1080×1350.
 | Phone legibility | 8 | Mono labels at 22 px are the floor; don't go smaller |
 | Visual variety | 7 | Slides 02–03 share a rhythm. **Fix:** give slide 02 a full-width pull quote instead of a heading |
 | Originality | 8 | |
-| Accessibility | 8 | Signal on Paper passes for large text only — keep it out of body copy |
+| Accessibility | 7 | The annotations (slide 02 note, slide 03 "← smallest") are set in Signal (4.0:1 on Paper). At 34–36 px on canvas they are normal-size text on a phone, so they fail AA. **Fix:** set annotation text in Signal Text `#B23A12` (5.2:1); keep Signal for the rule above the note |
 
 ## 15. Master prompt (excerpt)
 
@@ -70,7 +72,9 @@ Not yet produced: final copy review, alt text, export at 1080×1350.
 
 ## Fixed core
 - Colors: Paper #F3EFE6 (bg), Ink #141414 (text), Graphite #5C5A55 (secondary),
-  Rule #CFC8BA, Signal #D2421B (margin rule + one emphasis/slide), Deep #1F2A24 (closings only)
+  Rule #CFC8BA, Signal #D2421B (margin rule + one large emphasis/slide, never text under 66 px),
+  Signal Text #B23A12 (annotation text), Signal Tint #F06A43 (emphasis on Deep only),
+  Deep #1F2A24 (closings only)
 - Type: Instrument Serif display/H2, Inter body 32–34 px, JetBrains Mono labels 22 px UPPER +8%
 - Grid: 1080×1350, 96 px margins, margin rule at x=72, folio top-right on every slide
 ...

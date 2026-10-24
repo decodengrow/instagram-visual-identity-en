@@ -54,7 +54,7 @@ Explain why each direction fits the brand and what trade-offs it involves. Finis
 
 ### 4.1 Color system
 Primary, secondary, accent, background, text, functional and data-viz colors; forbidden combinations. Provisional HEX + purpose of each.
-Combinations for: headlines, body text, large background areas, charts, callouts/accent blocks, text over photos. Priority: legibility and deliberate contrast control (benchmark WCAG AA: 4.5:1 for text, 3:1 for large text).
+Combinations for: headlines, body text, large background areas, charts, callouts/accent blocks, text over photos. Priority: legibility and deliberate contrast control (benchmark WCAG AA: 4.5:1 for text, 3:1 for large text). Judge "large" at display size, not canvas size: a 1080 px canvas shows at roughly 1/3 scale on a phone, so text under ~66 px on canvas (~52 px if bold) counts as normal text and needs 4.5:1. If an accent color only passes 3:1, define a darker text variant of it rather than using it for small text.
 
 ### 4.2 Typography system
 Levels: display headline · H2 · section heading · body · captions · footnotes · labels · page numbers · numeric figures and metrics.
